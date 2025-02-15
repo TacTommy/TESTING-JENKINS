@@ -38,7 +38,7 @@ variable "project-8-pub-sub1_cidr-block" {
 
 variable "subnet_tags1" {
     description = "subnet tags1"
-    default     = "Project-8-pub-sub1"
+    default     = "Project-9-pub-sub1"
 }
 
 
@@ -49,7 +49,7 @@ variable "project-8-pub-sub2_cidr-block" {
 
 variable "subnet_tags2" {
     description = "subnet tags2"
-    default     = "Project-8-pub-sub2"
+    default     = "Project-9-pub-sub2"
 }
 
 
@@ -60,7 +60,7 @@ variable "priv-sub1-cidr_block" {
 
 variable "tags_priv1" {
     description = "private sub1"
-    default     = "project-8-priv-sub1"
+    default     = "project-9-priv-sub1"
 }
 
 
@@ -72,7 +72,7 @@ variable "priv-sub2-cidr_block" {
 
 variable "sunet_tags3" {
     description = "private sub cidr block2"
-    default     = "project-8-priv-sub2"
+    default     = "project-9-priv-sub2"
 }
 
 
@@ -102,19 +102,19 @@ variable "priv_sub2_zone" {
 
 variable "tags_project-8-pub-route-table" {
     description = "route table tags 1"
-    default     = "Project-8-pub-route-table"
+    default     = "Project-9-pub-route-table"
 }
 
 
 variable "tags_project-8-priv-route-table" {
     description = "route table tags 2"
-    default     = "Project-8-priv-route-table"
+    default     = "Project-9-priv-route-table"
 }
 
 
 variable "tags_igw" {
     description = "internet gw tags"
-    default     = "project-8-igw"
+    default     = "project-9-igw"
 }
 
 
@@ -146,103 +146,103 @@ variable "nat-gateway" {
 
 
 
-# Variables for rds
+# Variables for DB Tier
 
 variable "storage_type1" {
-    description = "rds1 storage type"
+    description = "DB Tier1 storage type"
     default     = "gp2"
 }
 
 variable "engine1" {
-    description = "rds1 engine"
+    description = "DB Tier1 engine"
     default     = "mysql"
 }
 
 
 variable "engine1_version" {
-    description = "rds1 engine version"
+    description = "DB Tier1 engine version"
     default     = "8.0"
 }
 
 
 variable "rds1_class" {
-    description = "rds1 instance class"
+    description = "DB Tier1 instance class"
     default     = "db.t3.micro"
 }
 
 
 variable "rds1_name" {
-    description = "rds1 instance class"
+    description = "DB Tier1 instance class"
     default     = "projectdb"
 }
 
 variable "rds1_username" {
-    description = "rds1 instance username"
+    description = "DB Tier1 instance username"
     default     = "admin"
 }
 
 
 variable "rds1_password" {
-    description = "rds1 instance password"
+    description = "DB Tier1 instance password"
     default     = "yourpassword"
 }
 
 
 variable "rds1_group_name" {
-    description = "rds1 parameter group name"
+    description = "DB Tier1 parameter group name"
     default     = "default.mysql8.0"
 }
 
 
 variable "rds1_accessible" {
-    description = "rds1 public accessibility"
+    description = "DB Tier1 public accessibility"
     default     = true
 }
 
 
 variable "rds1_tags" {
-    description = "rds1 tags"
-    default     = "Project RDS Instance"
+    description = "DB Tier1 tags"
+    default     = "Project 9 RDS Instance"
 }
 
 
 
-# FRONTEND EC2 
+# PRESENTATION LAYER EC2 
 
-# EC2 Web servers 1
+# Web Tier 1
 
 variable "web1_ami" {
-    description = "ami for server 1"
+    description = "ami for Web Tier 1"
     default     = "ami-02141377eee7defb9"
 }
 
 
 variable "web1_instance_type" {
-    description = "instance type for server 1"
+    description = "instance type for Web Tier 1"
     default     = "t2.micro"
 }
 
 
 variable "web1_key" {
-    description = "key pair for server 1"
+    description = "key pair for Web Tier 1"
     default     = "Ireland-Keypair"
 }
 
 
 variable "web1_zone" {
-    description = "availability zone for server 1"
+    description = "availability zone for Web Tier 1"
     default     = "eu-west-1a"
 }
 
 
 variable "web1_tags" {
-    description = "tags for server 1"
-    default     = "Front-end-1"
+    description = "tags for Web Tier 1"
+    default     = "Web Tier-1"
 }
 
 
 variable "web1_user_data" {
-    description = "user data for server 1"
+    description = "user data for Web Tier 1"
     default     = <<-EOF
   #!/bin/bash
   # Update and install httpd
@@ -256,40 +256,40 @@ variable "web1_user_data" {
 
 
 
-# EC2 Web servers 2
+# Web Tier 2
 
 variable "web2_ami" {
-    description = "ami for server 2"
+    description = "ami for Web Tier 2"
     default     = "ami-02141377eee7defb9"
 }
 
 
 variable "web2_instance_type" {
-    description = "instance type for server 2"
+    description = "instance type for Web Tier 2"
     default     = "t2.micro"
 }
 
 
 variable "web2_key" {
-    description = "key pair for server 2"
+    description = "key pair for Web Tier 2"
     default     = "Ireland-Keypair"
 }
 
 
 variable "web2_zone" {
-    description = "availability zone for server 2"
+    description = "availability zone for Web Tier 2"
     default     = "eu-west-1b"
 }
 
 
 variable "web2_tags" {
     description = "tags for server 2"
-    default     = "Front-end-2"
+    default     = "Web Tier 2"
 }
 
 
 variable "web2_user_data" {
-    description = "user data for server 2"
+    description = "user data for Web Tier 2"
     default     = <<-EOF
   #!/bin/bash
   # Update and install httpd
@@ -304,10 +304,10 @@ variable "web2_user_data" {
 
 
 
-# BACKEND EC2
+# APPLICATION LAYER EC2
 
 
-# EC2 Application server 1
+# App Tier 1
 
 variable "app1_ami" {
     description = "ami for application server 1"
@@ -316,31 +316,31 @@ variable "app1_ami" {
 
 
 variable "app1_instance_type" {
-    description = "instance type for application server 1"
+    description = "instance type for App Tier 1"
     default     = "t2.micro"
 }
 
 
 variable "app1_key" {
-    description = "key pair for application server 1"
+    description = "key pair for App Tier 1"
     default     = "Ireland-Keypair"
 }
 
 
 variable "app1_zone" {
-    description = "availability zone for application server 1"
+    description = "availability zone for App Tier 1"
     default     = "eu-west-1a"
 }
 
 
 variable "app1_tags" {
-    description = "tags for application server 1"
-    default     = "Back-end-1"
+    description = "tags for App Tier 1"
+    default     = "App Tier 1"
 }
 
 
 variable "app1_user_data" {
-    description = "user data for application server 1"
+    description = "user data for App Tier 1"
     default     = <<-EOF
   #!/bin/bash
   # Update and install httpd
@@ -354,40 +354,40 @@ variable "app1_user_data" {
 
 
 
-# EC2 Application server 2
+# App Tier 2
 
 variable "app2_ami" {
-    description = "ami for application server 2"
+    description = "ami for App Tier 2"
     default     = "ami-02141377eee7defb9"
 }
 
 
 variable "app2_instance_type" {
-    description = "instance type for application server 2"
+    description = "instance type for App Tier 2"
     default     = "t2.micro"
 }
 
 
 variable "app2_key" {
-    description = "key pair for application server 2"
+    description = "key pair for App Tier 2"
     default     = "Ireland-Keypair"
 }
 
 
 variable "app2_zone" {
-    description = "availability zone for application server 2"
+    description = "availability zone for App Tier 2"
     default     = "eu-west-1b"
 }
 
 
 variable "app2_tags" {
-    description = "tags for application server 2"
-    default     = "Back-end-2"
+    description = "tags for App Tier 2"
+    default     = "App Tier 2"
 }
 
 
 variable "app2_user_data" {
-    description = "user data for application server 2"
+    description = "user data for App Tier 2"
     default     = <<-EOF
   #!/bin/bash
   # Update and install httpd
@@ -522,7 +522,7 @@ variable "adjustment_in_type" {
 
 variable "balancer_name" {
     description = "the name of load balancer"
-    default     = "DB1"
+    default     = "LB1"
 }
 
 
