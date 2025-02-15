@@ -12,7 +12,7 @@ pipeline {
 
             steps { 
 
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/BarimaBaffour/my-tf-iac-aws-repo.git']]])             
+            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/TacTommy/TESTING-JENKINS.git']]])             
 
  
 
