@@ -30,6 +30,12 @@ variable "tags" {
 }
 
 
+variable "Name" {
+    description = "vpc-name"
+    default     = "Project VPC"
+}
+
+
 variable "project-8-pub-sub1_cidr-block" {
     description = "subnet cidr block 1"
     default     = "10.0.10.0/24"
@@ -42,6 +48,11 @@ variable "subnet_tags1" {
 }
 
 
+variable "subnet_name1" {
+    description = "subnet name1"
+    default     = "Project-9-pub-subn1"
+}
+
 variable "project-8-pub-sub2_cidr-block" {
     description = "subnettags2"
     default     = "10.0.11.0/24"
@@ -50,6 +61,12 @@ variable "project-8-pub-sub2_cidr-block" {
 variable "subnet_tags2" {
     description = "subnet tags2"
     default     = "Project-9-pub-sub2"
+}
+
+
+variable "subnet_name2" {
+    description = "subnet name2"
+    default     = "Project-9-pub-subn2"
 }
 
 
@@ -64,6 +81,12 @@ variable "tags_priv1" {
 }
 
 
+variable "name_priv1" {
+    description = "private sub1"
+    default     = "project-9-priv-subn1"
+}
+
+
 variable "priv-sub2-cidr_block" {
     description = "private sub cidr block2"
     default     = "10.0.13.0/24"
@@ -75,6 +98,11 @@ variable "sunet_tags3" {
     default     = "project-9-priv-sub2"
 }
 
+
+variable "sunet_name2" {
+    description = "private sub2"
+    default     = "project-9-priv-subn2"
+}
 
 variable "pub_sub1_zone" {
     description = "public sub1 zone"
@@ -106,17 +134,32 @@ variable "tags_project-8-pub-route-table" {
 }
 
 
+variable "name_project-8-pub-route-table" {
+    description = "route table name 1"
+    default     = "Project-9-publ-route-table"
+}
+
 variable "tags_project-8-priv-route-table" {
     description = "route table tags 2"
     default     = "Project-9-priv-route-table"
 }
 
 
+variable "name_project-8-priv-route-table" {
+    description = "route table name 2"
+    default     = "Project-9-priva-route-table"
+}
+
 variable "tags_igw" {
     description = "internet gw tags"
     default     = "project-9-igw"
 }
 
+
+variable "name_igw" {
+    description = "internet gw name"
+    default     = "project-9-igway"
+}
 
 
 variable "igw_route_cidr" {
@@ -131,6 +174,10 @@ variable "nat-eip" {
 }
 
 
+variable "nat-eip" {
+    description = "eip name"
+    default     = "natg-eip"
+}
 
 variable "nat-eip_domain" {
     description = "domain for nat eip"
@@ -144,7 +191,10 @@ variable "nat-gateway" {
 }
 
 
-
+variable "nat-gateway" {
+    description = "nat gw name"
+    default     = "nat-gatw"
+}
 
 # Variables for DB Tier
 
@@ -206,6 +256,10 @@ variable "rds1_tags" {
 }
 
 
+variable "rds1_name" {
+    description = "DB Tier1 name"
+    default     = "Project 9 DB RDS Instance"
+}
 
 # PRESENTATION LAYER EC2 
 
@@ -240,6 +294,11 @@ variable "web1_tags" {
     default     = "Web Tier-1"
 }
 
+
+variable "web1_name" {
+    description = "name for Web Tier 1"
+    default     = "Web Tier-1 ec2"
+}
 
 variable "web1_user_data" {
     description = "user data for Web Tier 1"
@@ -287,6 +346,11 @@ variable "web2_tags" {
     default     = "Web Tier 2"
 }
 
+
+variable "web2_name" {
+    description = "name for server 2"
+    default     = "Web Tier 2 ec2"
+}
 
 variable "web2_user_data" {
     description = "user data for Web Tier 2"
@@ -339,6 +403,11 @@ variable "app1_tags" {
 }
 
 
+variable "app1_name" {
+    description = "name for App Tier 1"
+    default     = "App Tier 1 ec2"
+}
+
 variable "app1_user_data" {
     description = "user data for App Tier 1"
     default     = <<-EOF
@@ -385,6 +454,11 @@ variable "app2_tags" {
     default     = "App Tier 2"
 }
 
+
+variable "app2_name" {
+    description = "name for App Tier 2"
+    default     = "App Tier 2 ec2"
+}
 
 variable "app2_user_data" {
     description = "user data for App Tier 2"
@@ -436,6 +510,10 @@ variable "target_tags" {
 }
 
 
+variable "target_name" {
+    description = "name for the target group"
+    default     = "tgrp"
+}
 
 # Creating a Launch Template
 
@@ -472,6 +550,11 @@ variable "template_resource" {
 variable "template_tag" {
     description = "tag name of the launch template"
     default     = "project-instance"
+}
+
+variable "template_name" {
+    description = "name of the launch template"
+    default     = "project-instance ec2"
 }
 
 

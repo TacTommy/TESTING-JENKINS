@@ -123,8 +123,6 @@ resource "aws_route_table_association" "subnet-private-route-association-2" {
 }
 
 
-
-
 # Internet Gateway
 resource "aws_internet_gateway" "project-8-igw" {
   vpc_id = aws_vpc.project-8.id
