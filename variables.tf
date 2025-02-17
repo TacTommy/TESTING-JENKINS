@@ -64,7 +64,7 @@ variable "subnet_tags2" {
 }
 
 
-variable "subnet_name" {
+variable "subnet_name1" {
     description = "subnet name2"
     default     = "Project-9-pub-subn2"
 }
@@ -81,7 +81,7 @@ variable "tags_priv1" {
 }
 
 
-variable "subnet_name" {
+variable "subnet_name2" {
     description = "private sub1"
     default     = "project-9-priv-subn1"
 }
