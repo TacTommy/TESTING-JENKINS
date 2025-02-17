@@ -28,6 +28,8 @@ resource "aws_subnet" "project-8-pub-sub1" {
   cidr_block  = var.project-8-pub-sub1_cidr-block
   availability_zone = var.pub_sub1_zone
 
+  map_public_ip_on_launch = true
+
   tags = {
     Name2 = var.subnet_tags1
   }
@@ -38,6 +40,8 @@ resource "aws_subnet" "project-8-pub-sub2" {
   vpc_id     = aws_vpc.project-8.id
   cidr_block = var.project-8-pub-sub2_cidr-block
   availability_zone = var.pub_sub2_zone
+
+map_public_ip_on_launch = true
 
   tags = {
     Name3 = var.subnet_tags2

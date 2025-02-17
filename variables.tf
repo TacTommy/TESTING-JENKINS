@@ -30,7 +30,7 @@ variable "tags" {
 }
 
 
-variable "Name" {
+variable "vpc_name" {
     description = "vpc-name"
     default     = "Project VPC"
 }
@@ -48,7 +48,7 @@ variable "subnet_tags1" {
 }
 
 
-variable "subnet_name1" {
+variable "subnet_name" {
     description = "subnet name1"
     default     = "Project-9-pub-subn1"
 }
@@ -64,7 +64,7 @@ variable "subnet_tags2" {
 }
 
 
-variable "subnet_name2" {
+variable "subnet_name" {
     description = "subnet name2"
     default     = "Project-9-pub-subn2"
 }
@@ -81,7 +81,7 @@ variable "tags_priv1" {
 }
 
 
-variable "name_priv1" {
+variable "subnet_name" {
     description = "private sub1"
     default     = "project-9-priv-subn1"
 }
@@ -99,7 +99,7 @@ variable "sunet_tags3" {
 }
 
 
-variable "sunet_name2" {
+variable "sunet_name" {
     description = "private sub2"
     default     = "project-9-priv-subn2"
 }
@@ -174,7 +174,7 @@ variable "nat-eip" {
 }
 
 
-variable "nat-eip" {
+variable "nat-eip2" {
     description = "eip name"
     default     = "natg-eip"
 }
@@ -191,7 +191,7 @@ variable "nat-gateway" {
 }
 
 
-variable "nat-gateway" {
+variable "nat-gateway2" {
     description = "nat gw name"
     default     = "nat-gatw"
 }
@@ -256,7 +256,7 @@ variable "rds1_tags" {
 }
 
 
-variable "rds1_name" {
+variable "rds1_name1" {
     description = "DB Tier1 name"
     default     = "Project 9 DB RDS Instance"
 }
@@ -288,6 +288,10 @@ variable "web1_zone" {
     default     = "eu-west-1a"
 }
 
+variable "associate_public_ip_address1" {
+    description = "pupbic ip address assocaite 1"
+    default     = true
+} 
 
 variable "web1_tags" {
     description = "tags for Web Tier 1"
@@ -340,6 +344,10 @@ variable "web2_zone" {
     default     = "eu-west-1b"
 }
 
+variable "associate_public_ip_address2" {
+    description = "pupbic ip address assocaite 2"
+    default     = true
+}
 
 variable "web2_tags" {
     description = "tags for server 2"
@@ -552,8 +560,8 @@ variable "template_tag" {
     default     = "project-instance"
 }
 
-variable "template_name" {
-    description = "name of the launch template"
+variable "template_name2" {
+    description = "launch template"
     default     = "project-instance ec2"
 }
 

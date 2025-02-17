@@ -123,6 +123,8 @@ resource "aws_instance" "webserver-1" {
   availability_zone = var.web1_zone
   
 
+  associate_public_ip_address = var.associate_public_ip_address1
+
   tags = {
     Name12 = var.web1_tags
   }
@@ -141,6 +143,7 @@ resource "aws_instance" "webserver-2" {
   vpc_security_group_ids = [aws_security_group.project-sc1.id]
   availability_zone = var.web2_zone
   
+  associate_public_ip_address = var.associate_public_ip_address2
 
   tags = {
     Name13 = var.web2_tags
