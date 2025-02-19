@@ -256,11 +256,6 @@ variable "rds1_tags" {
 }
 
 
-variable "rds1_name1" {
-    description = "DB Tier1 name"
-    default     = "Project 9 DB RDS Instance"
-}
-
 # PRESENTATION LAYER EC2 
 
 # Web Tier 1
